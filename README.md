@@ -8,9 +8,9 @@ This is a RPG type game
 
 #Built With
 
-    Godot Engine
+Godot Engine
 
-    GDScript
+GDScript
 
 #Gameplay
 
