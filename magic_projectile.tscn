@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://dm0wvakd05qy3"]
+
+[ext_resource type="Script" uid="uid://t2q2prsso3qk" path="res://script/magic_projectile.gd" id="1_xexvj"]
+[ext_resource type="Texture2D" uid="uid://b8watym1oboew" path="res://assets/Tiny Swords (Update 010)/Effects/Fire/Fire.png" id="2_a6wpt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0yfi"]
+atlas = ExtResource("2_a6wpt")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqg8x"]
+atlas = ExtResource("2_a6wpt")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ewpi"]
+atlas = ExtResource("2_a6wpt")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6c04l"]
+atlas = ExtResource("2_a6wpt")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ybvy"]
+atlas = ExtResource("2_a6wpt")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eg08x"]
+atlas = ExtResource("2_a6wpt")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fano"]
+atlas = ExtResource("2_a6wpt")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_crx7y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a0yfi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqg8x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ewpi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6c04l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ybvy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eg08x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fano")
+}],
+"loop": 2,
+"name": &"fly",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_crx7y"]
+radius = 15.132746
+
+[node name="MagicProjectile" type="Area2D" unique_id=1558157742]
+script = ExtResource("1_xexvj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1637114759]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_crx7y")
+animation = &"fly"
+frame = 6
+frame_progress = 0.5098915
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1849734018]
+shape = SubResource("CircleShape2D_crx7y")

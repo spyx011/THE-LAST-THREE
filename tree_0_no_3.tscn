@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://nnylpqxb1hb2"]
+
+[ext_resource type="Texture2D" uid="uid://dicjx3yovej3w" path="res://assets/Tiny Swords (Free Pack)/Terrain/Resources/Wood/Trees/Tree3.png" id="1_h7tyx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klglk"]
+atlas = ExtResource("1_h7tyx")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kyaph"]
+atlas = ExtResource("1_h7tyx")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psujm"]
+atlas = ExtResource("1_h7tyx")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_41sne"]
+atlas = ExtResource("1_h7tyx")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqdqa"]
+atlas = ExtResource("1_h7tyx")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7nyo"]
+atlas = ExtResource("1_h7tyx")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_seukv"]
+atlas = ExtResource("1_h7tyx")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_taj4l"]
+atlas = ExtResource("1_h7tyx")
+region = Rect2(1344, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_crx7y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_klglk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kyaph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psujm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_41sne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqdqa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7nyo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_seukv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_taj4l")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.7
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xqmkc"]
+radius = 48.0
+height = 148.0
+
+[node name="tree0no3" type="CharacterBody2D" unique_id=1093776404]
+position = Vector2(489, 193)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1887919961]
+sprite_frames = SubResource("SpriteFrames_crx7y")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1727768972]
+position = Vector2(1, -1)
+shape = SubResource("CapsuleShape2D_xqmkc")

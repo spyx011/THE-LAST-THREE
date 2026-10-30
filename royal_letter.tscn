@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://ccxrakt42r7u4"]
+
+[ext_resource type="Script" uid="uid://b4qkq8pk3e63" path="res://script/royal_letter.gd" id="1_k77hh"]
+[ext_resource type="Texture2D" uid="uid://6mv8bv6g3xoo" path="res://assets/paperpack/icons/Letter2.png" id="2_5shhe"]
+[ext_resource type="FontFile" uid="uid://cifua6mds0tay" path="res://assets/m6x11.ttf" id="3_5shhe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7yspy"]
+atlas = ExtResource("2_5shhe")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_crx7y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7yspy")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rqsym"]
+radius = 8.0
+
+[node name="RoyalLetter" type="Area2D" unique_id=1542165746]
+script = ExtResource("1_k77hh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=137015259]
+sprite_frames = SubResource("SpriteFrames_crx7y")
+frame_progress = 0.608591
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1600074921]
+shape = SubResource("CircleShape2D_rqsym")
+
+[node name="HintLabel" type="Label" parent="." unique_id=586014363]
+offset_left = -78.0
+offset_top = -42.0
+offset_right = -38.0
+offset_bottom = -14.0
+theme_override_fonts/font = ExtResource("3_5shhe")
+theme_override_font_sizes/font_size = 32

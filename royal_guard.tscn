@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://h6q8th4y0h5f"]
+
+[ext_resource type="Texture2D" uid="uid://dw26pmjlu2tw6" path="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Lancer/Lancer/Lancer-Idle.png" id="1_oeju8"]
+[ext_resource type="Script" uid="uid://b2a5s8bmnlmwu" path="res://script/royal_guard.gd" id="1_rjxft"]
+[ext_resource type="FontFile" uid="uid://cifua6mds0tay" path="res://assets/m6x11.ttf" id="2_rjxft"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjxft"]
+atlas = ExtResource("1_oeju8")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6m64s"]
+atlas = ExtResource("1_oeju8")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u15nx"]
+atlas = ExtResource("1_oeju8")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wglec"]
+atlas = ExtResource("1_oeju8")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03rd1"]
+atlas = ExtResource("1_oeju8")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n51hw"]
+atlas = ExtResource("1_oeju8")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_crx7y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjxft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6m64s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u15nx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wglec")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03rd1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n51hw")
+}],
+"loop": 2,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rqsym"]
+radius = 18.0
+height = 62.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7xj7g"]
+radius = 58.077534
+
+[node name="RoyalGuard" type="CharacterBody2D" unique_id=730915882]
+script = ExtResource("1_rjxft")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=954032786]
+sprite_frames = SubResource("SpriteFrames_crx7y")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1777217444]
+position = Vector2(0, -5)
+shape = SubResource("CapsuleShape2D_rqsym")
+
+[node name="TalkRange" type="Area2D" parent="." unique_id=19632626]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TalkRange" unique_id=58111038]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_7xj7g")
+
+[node name="DialogueBubble" type="CanvasLayer" parent="." unique_id=884651136]
+
+[node name="DialogueText" type="Label" parent="DialogueBubble" unique_id=1983716282]
+offset_left = 156.0
+offset_top = 156.0
+offset_right = 196.0
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("2_rjxft")
+theme_override_font_sizes/font_size = 32
+metadata/_edit_use_anchors_ = true

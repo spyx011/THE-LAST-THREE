@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://cepekv1bi2od"]
+
+[ext_resource type="Texture2D" uid="uid://c2heu42sb1mj0" path="res://assets/Tiny Swords (Free Pack)/Terrain/Resources/Wood/Trees/Tree1.png" id="1_087k8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipky0"]
+atlas = ExtResource("1_087k8")
+region = Rect2(0, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_re4u3"]
+atlas = ExtResource("1_087k8")
+region = Rect2(192, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6viw8"]
+atlas = ExtResource("1_087k8")
+region = Rect2(384, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r01is"]
+atlas = ExtResource("1_087k8")
+region = Rect2(576, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yoj8e"]
+atlas = ExtResource("1_087k8")
+region = Rect2(768, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_colx7"]
+atlas = ExtResource("1_087k8")
+region = Rect2(960, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_725ce"]
+atlas = ExtResource("1_087k8")
+region = Rect2(1152, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4c1y"]
+atlas = ExtResource("1_087k8")
+region = Rect2(1344, 0, 192, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_crx7y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipky0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_re4u3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6viw8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r01is")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yoj8e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_colx7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_725ce")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4c1y")
+}],
+"loop": 2,
+"name": &"default",
+"speed": 6.7
+}]
+
+[node name="tree1" type="CharacterBody2D" unique_id=2089646877]
+position = Vector2(532, 241)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=765672879]
+sprite_frames = SubResource("SpriteFrames_crx7y")
+autoplay = "default"
+frame_progress = 0.63592994

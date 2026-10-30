@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://becsbeyn3sgln"]
+
+[ext_resource type="Script" uid="uid://vepryk0n5gg3" path="res://script/start_screen.gd" id="1_tx5wa"]
+[ext_resource type="Texture2D" uid="uid://d0fcmg6l73x3g" path="res://assets/Screenshot 2026-10-25 183913.png" id="2_o7i0r"]
+[ext_resource type="AudioStream" uid="uid://br7ckijhj00jp" path="res://assets/andriih-background-music-background-599243.mp3" id="3_he1sj"]
+
+[node name="StartScreen" type="Control" unique_id=194800919]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1154.0
+offset_bottom = 652.0
+script = ExtResource("1_tx5wa")
+game_scene = "uid://b8faaat618ehp"
+background_image = ExtResource("2_o7i0r")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=304550446]
+stream = ExtResource("3_he1sj")
+autoplay = true

@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://5c0geaosukxe"]
+
+[ext_resource type="Script" uid="uid://xv5umjxkjea0" path="res://script/thief.gd" id="1_6jgx8"]
+[ext_resource type="Texture2D" uid="uid://bqqjmostjhwfj" path="res://assets/RPG CHARACTERS/Thief.png" id="2_sinav"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gsfqg"]
+atlas = ExtResource("2_sinav")
+region = Rect2(0, 0, 77, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1b76"]
+atlas = ExtResource("2_sinav")
+region = Rect2(462, 0, 77, 77)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_crx7y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gsfqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1b76")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_crx7y"]
+radius = 32.24903
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xqmkc"]
+radius = 48.507732
+
+[node name="Thief" type="CharacterBody2D" unique_id=920463845]
+script = ExtResource("1_6jgx8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1418876330]
+sprite_frames = SubResource("SpriteFrames_crx7y")
+frame_progress = 0.7913926
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=919953909]
+position = Vector2(0, 6)
+shape = SubResource("CircleShape2D_crx7y")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=236690738]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=105558630]
+position = Vector2(0, 6)
+shape = SubResource("CircleShape2D_xqmkc")

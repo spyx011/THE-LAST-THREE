@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://42cjmdm3swh8"]
+
+[ext_resource type="Script" uid="uid://bfk76my0g6xvk" path="res://script/meat_merchant.gd" id="1_yewc3"]
+[ext_resource type="Texture2D" uid="uid://c66515mqrj3n0" path="res://assets/RPG CHARACTERS/PNJ1.png" id="2_k1bdr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2oyd"]
+atlas = ExtResource("2_k1bdr")
+region = Rect2(0, 0, 77, 77)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_crx7y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2oyd")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rqsym"]
+radius = 19.0
+height = 72.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xqmkc"]
+radius = 75.0
+
+[node name="Meat Merchant" type="CharacterBody2D" unique_id=2013614858]
+script = ExtResource("1_yewc3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1190950483]
+sprite_frames = SubResource("SpriteFrames_crx7y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1527800016]
+position = Vector2(0, 6)
+shape = SubResource("CapsuleShape2D_rqsym")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=639403025]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=758615382]
+position = Vector2(0, 5)
+shape = SubResource("CircleShape2D_xqmkc")

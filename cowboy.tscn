@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://dtiofl6pmie4c"]
+
+[ext_resource type="Script" uid="uid://14xv5b0wslr2" path="res://script/cowboy.gd" id="1_l1vuo"]
+[ext_resource type="Texture2D" uid="uid://dj1ft7exforfi" path="res://assets/RPG CHARACTERS/CowBoy.png" id="2_3jd74"]
+[ext_resource type="FontFile" uid="uid://cifua6mds0tay" path="res://assets/m6x11.ttf" id="3_3jd74"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1vuo"]
+atlas = ExtResource("2_3jd74")
+region = Rect2(0, 0, 77, 77)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_crx7y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1vuo")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rqsym"]
+radius = 18.0
+height = 74.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_crx7y"]
+radius = 72.36712
+
+[node name="cowboy" type="CharacterBody2D" unique_id=1602870004]
+script = ExtResource("1_l1vuo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1368699748]
+sprite_frames = SubResource("SpriteFrames_crx7y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=898409782]
+position = Vector2(0, 5)
+shape = SubResource("CapsuleShape2D_rqsym")
+
+[node name="TalkRange" type="Area2D" parent="." unique_id=379434325]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TalkRange" unique_id=1283155296]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_crx7y")
+
+[node name="DialogueBubble" type="CanvasLayer" parent="." unique_id=1439498469]
+
+[node name="DialogueText" type="Label" parent="DialogueBubble" unique_id=1768681234]
+offset_left = 156.0
+offset_top = 156.0
+offset_right = 196.0
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("3_3jd74")
+theme_override_font_sizes/font_size = 32

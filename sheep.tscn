@@ -1,0 +1,152 @@
+[gd_scene format=3 uid="uid://dqw1nngijedov"]
+
+[ext_resource type="Texture2D" uid="uid://lbqcnmq7ocl4" path="res://assets/Tiny Swords (Free Pack)/Terrain/Resources/Meat/Sheep/Sheep_Grass.png" id="1_xqjq8"]
+[ext_resource type="Texture2D" uid="uid://det6sxrgspf0h" path="res://assets/Tiny Swords (Free Pack)/Terrain/Resources/Meat/Sheep/Sheep_Idle.png" id="2_qhocy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y540r"]
+atlas = ExtResource("1_xqjq8")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0miv"]
+atlas = ExtResource("1_xqjq8")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqpc1"]
+atlas = ExtResource("1_xqjq8")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8oqko"]
+atlas = ExtResource("1_xqjq8")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70b2t"]
+atlas = ExtResource("1_xqjq8")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbxcv"]
+atlas = ExtResource("1_xqjq8")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_totov"]
+atlas = ExtResource("1_xqjq8")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6c6nw"]
+atlas = ExtResource("1_xqjq8")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbgp1"]
+atlas = ExtResource("1_xqjq8")
+region = Rect2(1024, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fasf2"]
+atlas = ExtResource("1_xqjq8")
+region = Rect2(1152, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtbyb"]
+atlas = ExtResource("1_xqjq8")
+region = Rect2(1280, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owqke"]
+atlas = ExtResource("1_xqjq8")
+region = Rect2(1408, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_084o4"]
+atlas = ExtResource("2_qhocy")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqv8s"]
+atlas = ExtResource("2_qhocy")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gk12l"]
+atlas = ExtResource("2_qhocy")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ybys"]
+atlas = ExtResource("2_qhocy")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rot3"]
+atlas = ExtResource("2_qhocy")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1kdyn"]
+atlas = ExtResource("2_qhocy")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rqsym"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y540r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0miv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqpc1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8oqko")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70b2t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cbxcv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_totov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6c6nw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbgp1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fasf2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtbyb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_owqke")
+}],
+"loop": 2,
+"name": &"eating",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_084o4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqv8s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gk12l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ybys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8rot3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1kdyn")
+}],
+"loop": 2,
+"name": &"idle",
+"speed": 6.7
+}]
+
+[node name="sheep" type="CharacterBody2D" unique_id=2015574649]
+position = Vector2(595, 273)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1025073380]
+position = Vector2(14, 9.5)
+sprite_frames = SubResource("SpriteFrames_rqsym")
+animation = &"eating"
+autoplay = "eating"
