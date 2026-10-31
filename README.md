@@ -22,3 +22,6 @@ Obtain meat, wood, and a seat through quests.
 
 Assemble the boat and help the cowboy rescue the duck.
 
+##link to play##
+
+https://wnxvra.itch.io/the-last-three
